@@ -1,0 +1,17 @@
+<div>
+    <div class="container">
+        <div class="card text-left|center|right">
+          <div class="card-body">
+            <h4 class="card-title">{{book}}</h4>
+            <ul class="list-inline row">
+                <li class="list-inline-item col-2"><button class="btn btn-primary" @click="$emit('voitcount',1)">
+                        يعجبني
+                </button></li>
+                <li class="list-inline-item col-2"><button class="btn btn-waring" @click="$emit('voitcount',-1)">
+                    لا يعجبني 
+            </button></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>

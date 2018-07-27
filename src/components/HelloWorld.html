@@ -1,0 +1,26 @@
+<div class="hello">
+    <h1>{{ msg }}</h1>
+    <!-- <h1> {{sum}}</h1> -->
+    <HelloFormComponent @addElemenet="addbook($event)"/>
+    <div class="container-fluid">
+            <div class="w50">
+                    <div class="card text-center" v-for="(item,index) in booklist">
+                      <div class="card-body row">
+                       <div class="col-8">
+                        <HelloComponent @voitcount="voitCount($event,index)" v-bind:book="item.name" />
+                       </div>
+                       <div class="col-2">
+                            <div class="voit">
+                                   <p>{{ item.voit }}</p>
+                            </div>
+                       </div>
+                      </div>
+                      <div style="display:flow-root;">
+                        <button type="button" class="btn" @click="deleted(index)" style="margin:  10px 50px">حذف</button>
+                        <button type="button" class="btn" @click="hide(index)">اخفاء</button>
+                    </div>
+                    </div>
+                   
+                </div>
+    </div>
+</div>
